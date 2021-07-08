@@ -1,2 +1,2 @@
 # Generasi Gigih for Backend Engineering Path
-This repo for GIGIH Yayasan Anak Bangsa Bisa
+This repo is my journey in GIGIH Yayasan Anak Bangsa Bisa
