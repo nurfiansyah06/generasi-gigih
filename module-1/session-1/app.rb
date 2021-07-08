@@ -1,4 +1,5 @@
 require_relative 'person'
+require_relative 'hero'
 
 jin = Person.new("Jin Sakai", 100, 50)
 puts jin
@@ -9,7 +10,6 @@ puts khotun
 
 loop do
     jin.attack(khotun)
-    jin.jin_deflect
     break if khotun.is_dead?
 
     khotun.attack(jin)

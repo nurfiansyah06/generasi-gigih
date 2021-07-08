@@ -12,10 +12,11 @@ class Person
     end
 
     def attack(other_person)
-        other_person.take_damage(@attack_damage)
+        
 
         puts "#{@name} attacks #{other_person.name} with #{@attack_damage} damage"
         puts "#{other_person.name} has #{other_person.hitpoint} hitpoint and #{other_person.attack_damage} damage"
+        other_person.take_damage(@attack_damage)
     end
 
     def take_damage(damage)
@@ -29,8 +30,4 @@ class Person
         end
     end
 
-    def jin_deflect(damage)
-        other_person.take_damage(@attack_damage)
-        puts "Jin Sakai deflects the attacks."
-    end
 end
