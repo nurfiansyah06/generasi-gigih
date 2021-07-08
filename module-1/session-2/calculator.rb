@@ -6,5 +6,5 @@ class Calculator
 end
 
 integer = Calculator.new(1,3)
-# integer.add(1,3)
+integer.add(1,3)
 puts integer
