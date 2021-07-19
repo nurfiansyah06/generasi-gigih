@@ -1,0 +1,16 @@
+<h1>Update Item</h1>
+
+<form action="/items/update" method="POST">
+<% detail_item.each do |item| %>
+    <input type="hidden" name="item_id" value="<%= item.id %>">
+    <input name="name" type="text" placeholder="item name" value="<%= item.name %>">
+    <input name="price" type="number" placeholder="item price" value="<%= item.price %>">
+    
+    <select name="category_id">
+        <option value="1" <%= item.category_id == 1 ? 'selected' : '' %> >Makanan</option>
+        <option value="2" <%= item.category_id == 2 ? 'selected' : '' %> >Minuman</option>
+    </select>
+    <input type="hidden" name="_method" value="PUT">
+    <button type="submit">Submit</button>
+<% end %>
+</form>
