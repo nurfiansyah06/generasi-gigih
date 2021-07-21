@@ -18,7 +18,7 @@ end
 post '/items/create' do
     name = params['name']
     price = params['price']
-    category_id = params['category_id']
+    category_id = params['category']
     insert_item_categories(name,price,category_id)
     redirect '/'
 end
@@ -46,7 +46,7 @@ end
 put '/items/update' do 
     name = params['name']
     price = params['price']
-    category_id = params['category_id']
+    category_id = params['category']
     item_id = params['item_id']
     update_item_categories(name, price, item_id, category_id)
     redirect '/'
