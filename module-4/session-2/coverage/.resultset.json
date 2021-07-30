@@ -1,0 +1,74 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/vianos/Development/ruby/module-4/session-2/spec/array_of_int_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/vianos/Development/ruby/module-4/session-2/src/array_of_int.rb": {
+        "lines": [
+          1,
+          1,
+          4,
+          7,
+          3,
+          3,
+          4,
+          2,
+          2,
+          2,
+          null,
+          2,
+          2,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          4,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1627476521
+  }
+}
