@@ -3,7 +3,7 @@ require_relative 'Models/item'
 require_relative 'Models/category'
 
 get '/' do
-    items = Item.get_all_items
+    items = Item.get_all_item_categories
     erb :index, locals:{
         items: items,
     }

@@ -3,10 +3,12 @@ require './db/db_connector'
 class Item
     attr_accessor :id, :name, :price, :category, :category_id
 
-    def initialize(param)
-        @id= param[:id]
-        @price= param[:price]
-        @name= param[:name]
+    def initialize(id,name, price, category=nil, category_id=nil)
+        @id= params[:id]
+        @category= params[:price]
+        @category_id= params[:category_id]
+        @price= params[:price]
+        @name= params[:name]
     end
 
     def self.get_all_items 
@@ -34,11 +36,13 @@ class Item
     end
 
     def insert_item(name, price)
+        return valse unless valid?
         client = create_db_client
         client.query("INSERT INTO items (name, price) VALUES ('#{name}', '#{price}')")
     end
 
     def insert_item_categories(name, price, category_id)
+        return valse unless valid?
         client = create_db_client
         client.query("INSERT INTO items (name, price) VALUES ('#{name}', '#{price}')")
         id = client.last_id
@@ -46,6 +50,7 @@ class Item
     end
     
     def update_item_categories(name, price, item_id, category_id)
+        return valse unless valid?
         client = create_db_client
         client.query("UPDATE items SET name='#{name}', price='#{price}' WHERE id='#{item_id}'")
         client.query("UPDATE item_categories SET item_id='#{item_id}', category_id='#{category_id}' WHERE item_id='#{item_id}'")
@@ -67,6 +72,14 @@ class Item
     def delete_item(id)
         client = create_db_client
         client.query("DELETE FROM items WHERE id='#{id}'")
+    end
+
+    def valid? 
+        return false if @name.nil?
+        return false if @category.nil?
+        return false if @category_id.nil?
+        return false if @price.nil?
+        return true
     end
     
 end

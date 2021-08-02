@@ -1,6 +1,7 @@
 require 'sinatra'
 require_relative 'Models/item'
 require_relative 'Models/category'
+require_relative 'controllers/order_controllers'
 
 get '/' do
     items = Item.get_all_item_categories
@@ -51,4 +52,8 @@ put '/items/update' do
     item_id = params['item_id']
     update_item_categories(name, price, item_id, category_id)
     redirect '/'
+end
+
+def '/order/new' do
+    controllers = OrderController.new
 end

@@ -3,10 +3,12 @@ require './db/db_connector'
 class Item
     attr_accessor :id, :name, :price, :category, :category_id
 
-    def initialize(param)
-        @id= param[:id]
-        @price= param[:price]
-        @name= param[:name]
+    def initialize(id,name, price, category=nil, category_id=nil)
+        @id= params[:id]
+        @category= params[:price]
+        @category_id= params[:category_id]
+        @price= params[:price]
+        @name= params[:name]
     end
 
     def self.get_all_items 
